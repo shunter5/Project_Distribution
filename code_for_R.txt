@@ -11,5 +11,5 @@ names(data1)[8] <- "Gust Speed"
 names(data1)[9] <- "Sea Level Pressure"
 names(data1)[10] <- "Air Temperature"
 names(data1)[11] <- "Water Temperature"
-plot(data1[,11], type="l", lwd=2, col="red", xlab="Entries", xlim=c(0,240), ylab="Water Temp.", main="Water Temperature over Time", ylim=c(16.5,18) )
+plot(data1[,11], type="l", lwd=2, col="red", xlab="Entries", xlim=c(0,240), ylab="Water Temp.", main="Water Temperature over Time", ylim=c(10,40) )
 summary(data1)
