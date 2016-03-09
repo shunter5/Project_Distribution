@@ -1,0 +1,16 @@
+data1<-read.table("http://www.ndbc.noaa.gov/data/realtime2/ICAC1.txt",stringsAsFactors=FALSE,na.strings="MM")
+data1$V9 <- data1$V10 <- data1$V11 <- data1$V12 <- data1$V16 <- data1$V17 <- data1$V18 <- data1$V19  <- NULL
+names(data1)[1] <- "Year"
+names(data1)[2] <- "Month"
+names(data1)[3] <- "Day"
+names(data1)[4] <- "Hour"
+names(data1)[5] <- "Minute"
+names(data1)[6] <- "Wind Angle"
+names(data1)[7] <- "Wind Speed"
+names(data1)[8] <- "Gust Speed"
+names(data1)[9] <- "Sea Level Pressure"
+names(data1)[10] <- "Air Temperature"
+names(data1)[11] <- "Water Temperature"
+plot(data1[,11], type="l", lwd=2, col="red", xlab="Entries", xlim=c(0,240), ylab="Water Temp.", main="Water Temperature over Time", ylim=c(16.5,18) )
+summary(data1)
+
